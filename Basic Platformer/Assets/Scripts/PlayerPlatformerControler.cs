@@ -9,12 +9,14 @@ public class PlayerPlatformerControler : PhysicsObject
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private CircleCollider2D colider;
     private bool crouch;
 
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        colider = GetComponent<CircleCollider2D>();
     }
 
     protected override void ComputeVelocity()
@@ -32,13 +34,15 @@ public class PlayerPlatformerControler : PhysicsObject
             if (velocity.y > 0) velocity.y = velocity.y * .5f;
         }
 
-        if(Input.GetKey("down"))
+        if(Input.GetButtonDown("Crouch"))
         {
             crouch = true;
-            velocity.x = velocity.x / 2f;
+            colider.enabled = false;
+            move.x = move.x / 2f;
         }
-        else
+        else if(Input.GetButtonUp("Crouch"))
         {
+            colider.enabled = true;
             crouch = false;
         }
 
