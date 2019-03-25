@@ -374,9 +374,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Move horizontally : Right and Left arrow key
 
-    Jump : Spacebar
-
-    Crouch : Down arrow key'
+    Jump : Spacebar'
 --- !u!222 &282901582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1770,8 +1768,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.029999971, y: -0.5427848}
-  m_Size: {x: 0.9458637, y: 0.9458637}
+  m_Offset: {x: -0.029999971, y: -0.13217777}
+  m_Size: {x: 0.9458637, y: 1.7670778}
   m_Direction: 0
 --- !u!212 &1361133471
 SpriteRenderer:
@@ -1851,9 +1849,6 @@ MonoBehaviour:
   gravityModifier: 1
   maxSpeed: 7
   jumpTakeOffSpeed: 7
-  colider: {fileID: 1361133470}
-  cellingCheck: 0
-  crouch: 0
 --- !u!1 &1420739471
 GameObject:
   m_ObjectHideFlags: 0
